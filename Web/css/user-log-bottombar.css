@@ -1,0 +1,38 @@
+﻿ul.login {
+    width: 80%;
+    list-style-type: none;
+    margin: 10px 15%;
+    padding: 0;
+    overflow: hidden;
+}
+
+p.welcome {
+    margin-top: 3px;
+    margin-right: 10px;
+    height: 30px;
+    text-align: right;
+    color: #ddd;
+    font: bold 20px Calibri;
+}
+
+li.topnav {
+    float: right;
+    width: 200px;
+}
+
+li.topnav a {
+    width: 100px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font: bold 18px Calibri;
+    border-right: 10px solid green;
+    border-radius: 8px;
+    background-color: #ccc;
+}
+
+li.topnav a:hover {
+    background-color: #777;
+}

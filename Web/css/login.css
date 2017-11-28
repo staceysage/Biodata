@@ -1,0 +1,77 @@
+﻿body {
+    background-color: #929292;
+}
+
+p {
+    font: bold 24px Calibri;
+    color: white;
+}
+
+p.welcome {
+    height: 30px;
+    color: #ddd;
+    font: bold 28px Calibri;
+}
+
+p.success {
+    color: #ddd;
+    font: bold 28px Calibri;
+}
+
+div.content {
+    height: 100%;
+    margin: 0 8%;
+    border-top: 1px solid transparent;
+    background: #777;
+}
+div.main {
+    margin: 10% 25%;
+}
+
+ul.login {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.top {
+    float: left;
+    margin: 10px 6%;
+}
+
+li.log {
+    width: 100px;
+}
+
+li.log a {
+    width: 140px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font: bold 22px Calibri;
+    border-right: 10px solid red;
+    border-radius: 4px;
+    background-color: #ccc;
+}
+
+li.log a:hover {
+    background-color: #aaa;
+}
+
+form.main {
+    font: bold 20px verdana;
+    margin: 5px 0 40px 0;
+    color: white;
+}
+
+input.data {
+    height: 40px;
+    width: 100%;
+    font-size: 24px;
+    text-indent: 10px;
+    margin: 10px 0;
+    border: 5px solid #ccc; 
+    background-color: white;
+}
