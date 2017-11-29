@@ -23,9 +23,9 @@ class Home extends CI_Controller {
     {
         $this->load->helper('url'); 
         //get data from the database
-        $data['person'] = $this->home_model->get_person();
+        $datau['user'] = $this->home_model->get_user();
         
         //load view and pass the data
-        $this->load->view('login_view', $data);
+        $this->load->view('login_view', $datau);
     }
 }

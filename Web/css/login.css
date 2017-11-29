@@ -54,12 +54,50 @@ li.log a {
     border-right: 10px solid red;
     border-radius: 4px;
     background-color: #ccc;
+    transition: 0.4s;
 }
 
 li.log a:hover {
     background-color: #aaa;
 }
 
+input.logi {
+    width: 180px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font: bold 22px Calibri;
+    border-right: 10px solid green;
+    border-radius: 4px;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input.logr{
+    width: 180px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font: bold 22px Calibri;
+    border-right: 10px solid orangered;
+    border-radius: 4px;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: 0.4s;
+}
+input.logi:hover {
+    background-color: #aaa;
+    border-right: 10px solid lime;
+}
+input.logr:hover {
+    background-color: #aaa;
+    border-right: 10px solid red;
+}
 form.main {
     font: bold 20px verdana;
     margin: 5px 0 40px 0;

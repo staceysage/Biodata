@@ -18,35 +18,66 @@
         <div class="grid-empat">
             <div class="content">
                 <div class="main">
+                    <!-- register -->
                     <?php if(isset($_GET["login"]) and $_GET["login"]=="newuser") {?>
                     <form class="main" action="\#">
+                        NPM<br>
+                        <input class="data" type="text" name="npmsu" placeholder="Nama / NPM">
+                        <br>
                         Username<br>
-                        <input class="data" type="text" name="name" placeholder="Nama / NPM">
+                        <input class="data" type="text" name="namesu" placeholder="Nama / NPM">
                         <br>
                         Password<br>
-                        <input class="data" type="password" name="pass" placeholder="Password">
+                        <input class="data" type="password" name="passsu" placeholder="Password">
                         <br>
                         Verify Password<br>
-                        <input class="data" type="password" name="pass" placeholder="Re-enter Password">
+                        <input class="data" type="password" name="repasssu" placeholder="Re-enter Password">
+                        <input class="logr" type="submit" value="register"/>
                     </form>
-                    <ul class="login">
-                        <li class="log"><a style="border-right-color:orangered" href=".">REGISTER</a></li>
-                    </ul>
                     <p style="margin:10px 0">Sudah punya akun?</p>
                     <ul class="login">
                         <li class="log"><a style="border-right-color:green" href="login">LOGIN</a></li>
                     </ul>
+                    
+                    <!-- login success -->
+                    <?php } elseif(isset($_GET["login"]) and $_GET["login"]=="loginsucc") {?>
+                        <p>Anda berhasil Login!</p>
+                        <ul class="login">
+                            <li class="log"><a style="border-right-color:blue;margin-top:20px;" href="index">Menu Utama</a></li>
+                        </ul>
+                    <!-- login -->
                     <?php } else { ?>
-                    <form class="main" action="\#">
+                    <form class="main" method="POST" action="">
                         Username<br>
-                        <input class="data" type="text" name="name" placeholder="Nama / NPM">
+                        <input class="data" type="text" name="nameli" placeholder="Nama / NPM">
                         <br>
                         Password<br>
-                        <input class="data" type="password" name="pass" placeholder="Password">
+                        <input class="data" type="password" name="passli" placeholder="Password">
+                        <?php
+                        if(isset($_GET["login"]) and $_GET["login"]=="loginfail") {?>
+                            <p>nama atau password salah!<p>
+                        <?php } ?>
+                        <input class="logi" type="submit" value="login"/>
                     </form>
-                    <ul class="login">
-                        <li class="log"><a style="border-right-color:green" href="#">LOGIN</a></li>
-                    </ul>
+                    <?php
+                    if(isset($_POST['nameli']) and !empty($_POST['nameli'])) {
+                        $it = 0;
+                        $len = count($user);
+                        foreach($user as $us): 
+                            if(($us['npm'] == $_POST['nameli']) or ($us['nama'] == $_POST['nameli'])) {
+                                if($us['pass'] == $_POST['passli']){
+                                    header("Location: ?login=loginsucc");
+                                    break;
+                                }
+                                else if ($it == $len - 1) {
+                                    header("Location: ?login=loginfail");
+                                }
+                            } else if ($it == $len - 1) {
+                                header("Location: ?login=loginfail");
+                            }
+                            $it++;
+                        endforeach;
+                    } ?>
                     <p style="margin:10px 0">Belum punya akun?</p>
                     <ul class="login">
                         <li class="log"><a style="border-right-color:orangered" href="?login=newuser">REGISTER</a></li>
