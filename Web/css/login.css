@@ -3,19 +3,19 @@
 }
 
 p {
-    font: bold 24px Calibri;
+    font: bold 24px "Agency FB";
     color: white;
 }
 
 p.welcome {
     height: 30px;
     color: #ddd;
-    font: bold 28px Calibri;
+    font: bold 28px "Agency FB";
 }
 
 p.success {
     color: #ddd;
-    font: bold 28px Calibri;
+    font: bold 28px "Agency FB";
 }
 
 div.content {
@@ -50,7 +50,7 @@ li.log a {
     text-align: center;
     padding: 5px 16px;
     text-decoration: none;
-    font: bold 22px Calibri;
+    font: bold 22px "Agency FB";
     border-right: 10px solid red;
     border-radius: 4px;
     background-color: #ccc;
@@ -68,7 +68,7 @@ input.logi {
     text-align: center;
     padding: 5px 16px;
     text-decoration: none;
-    font: bold 22px Calibri;
+    font: bold 22px "Agency FB";
     border-right: 10px solid green;
     border-radius: 4px;
     background-color: #ccc;
@@ -83,7 +83,7 @@ input.logr{
     text-align: center;
     padding: 5px 16px;
     text-decoration: none;
-    font: bold 22px Calibri;
+    font: bold 22px "Agency FB";
     border-right: 10px solid orangered;
     border-radius: 4px;
     background-color: #ccc;

@@ -12,7 +12,7 @@ p.welcome {
     height: 30px;
     text-align: right;
     color: #ddd;
-    font: bold 20px Calibri;
+    font: bold 20px "Agency FB";
 }
 
 li.topnav {
@@ -27,7 +27,7 @@ li.topnav a {
     text-align: center;
     padding: 5px 16px;
     text-decoration: none;
-    font: bold 18px Calibri;
+    font: bold 18px "Agency FB";
     border-right: 10px solid green;
     border-radius: 8px;
     background-color: #ccc;

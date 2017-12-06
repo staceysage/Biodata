@@ -20,7 +20,6 @@
                 <?php } else { ?>
                 <li class="topnav"><a href="login">log-in</a></li>
                 <?php } ?>
-                <!-- <li class="topnav"><p class="welcome">Welcome, Stacy</p></li> -->
             </ul>
         </div>
         <?php include 'grid-dua.php';?>

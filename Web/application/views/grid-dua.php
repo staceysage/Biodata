@@ -6,7 +6,9 @@
 <div class="grid-dua">
     <ul class="content">
         <?php foreach($person as $ps): ?>
-            <li class="content"><a class="<?php if(!isset($_GET['npm']) or (isset($_GET['npm']) and $_GET['npm']!= $ps['npm'])){ echo "n";} ?>active" href="?npm=<?php echo $ps['npm'] ?>"><?php echo $ps['panggilan'] ?></a></li>
+            <div class="content-cover">
+                <li class="content"><a class="<?php if(!isset($_GET['npm']) or (isset($_GET['npm']) and $_GET['npm']!= $ps['npm'])){ echo "n";} ?>active" href="?npm=<?php echo $ps['npm'] ?>"><?php echo $ps['panggilan'] ?></a></li>
+            </div>
         <?php endforeach; ?>
     </ul>
 </div>

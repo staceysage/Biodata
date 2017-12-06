@@ -21,7 +21,7 @@
     grid-column: 2;
     grid-row: 2 / span 2;
     overflow: auto;
-    background-color: #929292;
+    background-color: #f2f2f2;
 }
 .grid-empat {
     grid-column: 1 / span 2;
@@ -37,19 +37,19 @@
 }
 ul.content {
     list-style-type: none;
-    margin: 30px 10px;
+    margin: 30px 0;
     padding: 0;
     width: 200px;
 }
 li.content {
-    margin: 20px 10px;
+    margin: 0;
     text-align: center;
-    font: bold 18px Calibri;
+    font: bold 18px;
 }
 li.content a {
     display: block;
-    background-color: #ddd;
-    color: #000;
+    background-color: #f2f2f2;
+    color: #a2a2a2;
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -60,7 +60,12 @@ li.content a:hover {
 li.content a.active {
     border-right: 10px solid #00ffff;
 }
-
 li.content a.nactive {
     border-right: 10px solid #ffd800;
+}
+div.content-cover {
+    height: 120px;
+    width: 100%;
+    display: block;
+    background-color: #f2f2f2;
 }

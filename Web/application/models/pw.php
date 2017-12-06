@@ -9,10 +9,10 @@ class Home_model extends CI_Model {
     public function get_person()
     {
         $query = $this->db->get('person');
-        if($query->num_rows() > 0){
+        if ($query->num_rows() > 0){
             $result = $query->result_array();
             return $result;
-        }else{
+        } else {
             return false;
         }
     }
