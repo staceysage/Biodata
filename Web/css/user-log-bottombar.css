@@ -1,7 +1,7 @@
 ﻿ul.login {
     width: 80%;
     list-style-type: none;
-    margin: 10px 15%;
+    margin: 0 15% 10px;
     padding: 0;
     overflow: hidden;
 }
@@ -17,22 +17,32 @@ p.welcome {
 
 li.topnav {
     float: right;
-    width: 200px;
+    padding: 0 15px;
 }
-
 li.topnav a {
-    width: 100px;
     display: block;
-    color: black;
+    color: #808080;
+    padding: 2px 5px 0;
     text-align: center;
-    padding: 5px 16px;
     text-decoration: none;
-    font: bold 18px "Agency FB";
-    border-right: 10px solid green;
-    border-radius: 8px;
-    background-color: #ccc;
+    font: 30px "Agency FB";
+    border-top: 8px solid #00ffff00;
+    background-color: #e6e6e600;
+    transition: 0.4s;
 }
-
-li.topnav a:hover {
-    background-color: #777;
+li.topnav a.active {
+    border-top: 8px solid #ffcc00;
+    color: #ffcc00;
+}
+li.topnav a:hover:not(.active) {
+    border-top: 8px solid #00ffff;
+    color: #00ffff;
+}
+.topnav-divider {
+    float: right;
+    transform: translateY(12px);
+    height: 32px;
+    width: 0;
+    display: inline;
+    border-right: 1px solid #cccccc;
 }

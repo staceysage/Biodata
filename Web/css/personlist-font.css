@@ -1,18 +1,30 @@
-﻿h1 {
-    text-align: center;
+﻿p.person#head {
+    margin: 20px 0 10px 40px;
     font-family: "Agency FB";
+    font-size: 36px;
+    color: #808080;
 }
-
-h2.person {
-    margin: 40px 0 0 30px;
-    font-family: "Agency FB";
-    color: white;
-}
-
 p.person {
-    margin: 10px 0 0 40px;
     text-align: left;
+    margin: 20px 0 10px 10px;
     font-family: "Agency FB";
-    font-size: 18px;
-    color: white;
+    font-size: 32px;
+    color: #808080;
+}
+.table-person-content {
+    margin-bottom: 80px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-person-content td {
+    padding: 10px;
+}
+.table-person-content td:nth-child(1) {
+    width: 400px;
+}
+.table-person-content, .table-person-content tr, .table-person-content td {
+    border: 1px solid #b3b3b3;
+}
+.table-person-content tr:first-child {
+    border-bottom: 1px solid #aeaeae;
 }

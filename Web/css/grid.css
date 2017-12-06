@@ -1,15 +1,16 @@
 ﻿.grid-container {
     position: fixed;
     display: grid;
-    width: 100%;
+    left: 80px;
+    width: calc(100% - 80px);
     height: 100%;
     grid-template-columns: 240px 1fr;
-    grid-template-rows: 50px 80px 1fr;
+    grid-template-rows: 60px 80px 1fr;
 }
 .grid-satu {
     grid-column: 1;
     grid-row: 2;
-    background-color: #808080;
+    background-color: #f2f2f2;
 }
 .grid-dua {
     grid-column: 1;
@@ -21,7 +22,7 @@
     grid-column: 2;
     grid-row: 2 / span 2;
     overflow: auto;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
 }
 .grid-empat {
     grid-column: 1 / span 2;
@@ -33,39 +34,73 @@
 .grid-topnav {
     grid-column: 1 / span 2;
     grid-row: 1;
-    background-color: #333;
+    background-color: #e6e6e6;
+    background: linear-gradient(#e6e6e6, #f4f4f4);
+    border-bottom: 1px solid #d6d6d6;
 }
 ul.content {
     list-style-type: none;
-    margin: 30px 0;
     padding: 0;
-    width: 200px;
+    width: 100%;
 }
 li.content {
+    height: 75px;
+    width: 100%;
     margin: 0;
     text-align: center;
-    font: bold 18px;
+    background-color: #f2f2f2;
+    font: 36px "Agency FB";
+    transition: 0.5s;
 }
 li.content a {
-    display: block;
+    height: 100%;
+    width: calc(100% - 25px);
     background-color: #f2f2f2;
-    color: #a2a2a2;
-    padding: 8px 16px;
     text-decoration: none;
+    transition: 0.4s;
 }
-li.content a:hover {
-    background-color: #555;
-    color: white;
+li.content a p {
+    text-align: left;
+    transform: translateY(15px);
+    width: calc(100% - 25px);
+    display: inline-block;
+    padding-left: 20px;
+    border-left: 8px solid #ffffff00;
+    color: #808080;
+    transition: 0.4s;
 }
-li.content a.active {
-    border-right: 10px solid #00ffff;
+li.content:nth-child(even) a, li.content:nth-child(even) {
+    background-color: #f9f9f9;
 }
-li.content a.nactive {
-    border-right: 10px solid #ffd800;
+li.content a:hover:not(#no-hover):not(.active) p {
+    border-left: 8px solid #00ffff;
+    color: #00ffff;
 }
-div.content-cover {
-    height: 120px;
-    width: 100%;
-    display: block;
-    background-color: #f2f2f2;
+li.content a.active p {
+    border-left: 8px solid #ffcc00;
+    color: #ffcc00;
+}
+.grid-leftnav {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    background-color: #4d4d4d;
+    z-index: 10;
+}
+.hyperblock div{
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    margin-left: 0;
+    padding-left: 7px;
+    border-left: 8px solid #ffcc0000;
+    text-align: right;
+}
+.hyperblock div.active {
+    border-left: 8px solid #ffcc00;
+}
+.hyperblock div:hover:not(.active) {
+    border-left: 8px solid #00ffff;
 }
