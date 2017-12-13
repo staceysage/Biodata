@@ -6,37 +6,33 @@
     overflow: hidden;
 }
 
-p.welcome {
-    margin-top: 3px;
-    margin-right: 10px;
-    height: 30px;
-    text-align: right;
-    color: #ddd;
-    font: bold 20px "Agency FB";
-}
-
 li.topnav {
     float: right;
     padding: 0 15px;
 }
-li.topnav a {
-    display: block;
+li.topnav a, li.topnav p {
+    display: inline-block;
     color: #808080;
     padding: 2px 5px 0;
     text-align: center;
     text-decoration: none;
     font: 30px "Agency FB";
+}
+li.topnav a:not(#non-left), li.topnav p {
     border-top: 8px solid #00ffff00;
     background-color: #e6e6e600;
     transition: 0.4s;
 }
-li.topnav a.active {
+li.topnav a.active:not(#non-left) {
     border-top: 8px solid #ffcc00;
     color: #ffcc00;
 }
-li.topnav a:hover:not(.active) {
+li.topnav a:hover:not(.active):not(#non-left) {
     border-top: 8px solid #00ffff;
     color: #00ffff;
+}
+li.topnav #welcome:not(div) {
+    vertical-align: 50%;
 }
 .topnav-divider {
     float: right;

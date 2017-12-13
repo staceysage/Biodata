@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #929292;
+    background-color: #ffffff;
 }
 
 p {
@@ -22,9 +22,9 @@ p.success {
 }
 
 div.content {
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     border-top: 1px solid transparent;
-    background: #ffffff;
 }
 div.main {
     margin: 2% 20%;
@@ -66,6 +66,7 @@ li.log a:hover {
 input.logi {
     width: 180px;
     display: block;
+    margin: 0 10px;
     text-align: center;
     font-family: "Agency FB";
     font-size: 32px;
@@ -81,6 +82,18 @@ input.logi {
     text-align: center;
     width: 200px;
     vertical-align: bottom;
+}
+.login-helper td.table-divider {
+    text-align: center;
+    width: auto;
+    vertical-align: bottom;
+}
+div.table-divider {
+    height: 40px;
+    width: 2px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+    border-right: 0.5px solid #aaa;
 }
 input.logr{
     width: 180px;
@@ -131,7 +144,9 @@ ul.login-res {
 }
 li.login-res a {
     display: block;
+    width: 180px;
     color: #808080;
+    margin: 0 10px;
     padding: 2px 5px 0;
     text-align: center;
     text-decoration: none;
@@ -143,4 +158,33 @@ li.login-res a {
 li.login-res a:hover {
     border-bottom: 5px solid #00ffff;
     color: #00ffff;
+}
+p#warning-login {
+    animation: warning-text-red 4s;
+}
+div.warning-login {
+    width: 0;
+    height: 2px;
+    background-color: red;
+}
+div.warning-login#login {
+    animation: warning-text-bar 4s;
+}
+div.warning-login#regist {
+    animation: warning-text-bar-2 4s;
+}
+@keyframes warning-text-red {
+    0%, 100% {color: #808080;}
+    15%, 70% {color: red;}
+    
+}
+@keyframes warning-text-bar {
+    0% {width: 0;}
+    10%, 60% {width: 250px;transform: translateX(0px);}
+    90% {width: 0; transform: translateX(250px);}
+}
+@keyframes warning-text-bar-2 {
+    0% {width: 0;}
+    10%, 60% {width: 170px;transform: translateX(0px);}
+    90% {width: 0; transform: translateX(170px);}
 }

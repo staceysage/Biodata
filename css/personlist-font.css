@@ -1,0 +1,67 @@
+﻿p.person#head {
+    display: inline;
+    margin:  0;
+    font-family: "Agency FB";
+    font-size: 36px;
+    color: #808080;
+    vertical-align: 60%;
+}
+img#head-img {
+    display: inline-block;
+    margin: 10px 10px;
+}
+p.person {
+    text-align: left;
+    margin: 20px 0 10px 10px;
+    font-family: "Agency FB";
+    font-size: 32px;
+    color: #808080;
+}
+.table-person-content {
+    margin-bottom: 80px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.edit-bio-red {
+    display: inline-block;
+}
+.edit-bio-menu {
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: 150%;
+}
+.edit-bio-menu p {
+    width: auto;
+    margin: 10px;
+    margin-bottom: 0;
+}
+#edit-bio-img {
+    margin: 20px;
+    margin-left: 0;
+    transition: 0.3s;
+}
+#bottom-hover-anim {
+    width: 0;
+    height: 4px;
+    margin: 0 10px;
+    background-color: #00ffff;
+    transition: 0.3s;
+}
+.edit-bio-red:hover #edit-bio-img {
+    filter: brightness(0.6);
+}
+.edit-bio-red:hover #bottom-hover-anim {
+    width: 74px;
+}
+.table-person-content td {
+    padding: 10px;
+}
+.table-person-content td:nth-child(1) {
+    width: 400px;
+}
+.table-person-content, .table-person-content tr, .table-person-content td {
+    border: 1px solid #b3b3b3;
+}
+.table-person-content tr:first-child {
+    border-bottom: 1px solid #aeaeae;
+}

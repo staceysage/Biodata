@@ -13,21 +13,30 @@
 <body>
     <div class="grid-container">
         <div class="grid-topnav">
+            <?php if(isset($_GET["stats"])) {
+                if($_GET["stats"]=="logout") {
+                    $array_items = array('npm', 'nama');
+                    $this->session->unset_userdata($array_items);
+                }
+            } ?>
             <ul class="login">
-                <?php if(isset($_SESSION['some_name'])) { ?>
+                <?php if(isset($_SESSION['npm'])) { ?>
                 <li class="topnav"><a href="?stats=logout">log-out</a></li>
-                <li class="topnav"><p class="welcome">Welcome, <?php $name = $_SESSION['name']; ?></p></li>
+                <div class="topnav-divider"></div>
+                <li class="topnav">
+                    <!-- <a class="hyperblock" id="non-left" href="index?npm=0"><div id="admin"><img src="<?php /*echo base_url();?>icon/biodatalisticon.png" class="<?php if(isset($_GET['npm'])){ echo "active";}*/ ?>" height="40px" width="40px" margin="auto"> </div></a> -->
+                    <p id="welcome"><span style="color:#ffcc00">● </span>Welcome, </p><a id="welcome" href><?php echo $this->session->userdata('nama'); ?></a>
+                </li>
                 <?php } else { ?>
                 <li class="topnav"><a href="login?login=newuser">Register</a></li>
                 <div class="topnav-divider"></div>
                 <li class="topnav"><a href="login">Login</a></li>
                 <?php } ?>
-                <!-- <li class="topnav"><p class="welcome">Welcome, Stacy</p></li> -->
             </ul>
         </div>
         <div class="grid-leftnav">
-            <a class="hyperblock" href="index"><div class="<?php if(!isset($_GET['npm'])){ echo "active";} ?>"><img src="<?php echo base_url();?>icon/homeicon.png" height="50px" width="50px" margin="auto"> </div></a>
-            <a class="hyperblock" href="index?npm=0"><div class="<?php if(isset($_GET['npm'])){ echo "active";} ?>"><img src="<?php echo base_url();?>icon/biodatalisticon.png" height="50px" width="50px" margin="auto"> </div></a>
+            <a class="hyperblock" href="index"><div class="<?php if(!isset($_GET['npm'])){ echo "active";} ?>"><img src="<?php echo base_url();?>icon/homeicon.png" class="<?php if(!isset($_GET['npm'])){ echo "active";} ?>" height="50px" width="50px" margin="auto"> </div></a>
+            <a class="hyperblock" href="index?npm=0"><div class="<?php if(isset($_GET['npm'])){ echo "active";} ?>"><img src="<?php echo base_url();?>icon/biodatalisticon.png" class="<?php if(isset($_GET['npm'])){ echo "active";} ?>" height="50px" width="50px" margin="auto"> </div></a>
         </div>
 
         <?php 
@@ -52,9 +61,19 @@
             <table class="table-person-content">
                 <tr>
                     <td style="background-color:#f3f3f3">
+                        <img src="<?php echo base_url();?>icon/userbiodataicon.png" height="60px" width="60px" margin="auto" id="head-img">
                         <p class="person" id="head">Biodata</h1>
                     </td>
-                    <td></td>
+                    <td style="text-align:right">
+                        <?php if(isset($_SESSION['npm'])) { ?>
+                            <a class="edit-bio-red" href="">
+                            <div class="edit-bio-menu" href="#">
+                                <p class="person">edit bio</p>
+                                <div id="bottom-hover-anim"></div>
+                        </div>
+                            <img src="<?php echo base_url();?>icon/editicon.png" height="40px" width="40px" margin="auto" id="edit-bio-img"></a>
+                        <?php } ?>
+                    </td>
                 </tr>
                 <!-- isi -->
                 <tr>

@@ -15,7 +15,8 @@
 .grid-dua {
     grid-column: 1;
     grid-row: 3;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: #808080;
 }
 .grid-tiga {
@@ -28,7 +29,6 @@
     grid-column: 1 / span 2;
     grid-row: 2 / span 2;
     overflow: auto;
-    background-color: #444;
 }
 
 .grid-topnav {
@@ -50,14 +50,14 @@ li.content {
     text-align: center;
     background-color: #f2f2f2;
     font: 36px "Agency FB";
-    transition: 0.5s;
+    transition: 0.4s;
 }
 li.content a {
     height: 100%;
     width: calc(100% - 25px);
     background-color: #f2f2f2;
     text-decoration: none;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 li.content a p {
     text-align: left;
@@ -67,7 +67,7 @@ li.content a p {
     padding-left: 20px;
     border-left: 8px solid #ffffff00;
     color: #808080;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 li.content:nth-child(even) a, li.content:nth-child(even) {
     background-color: #f9f9f9;
@@ -89,7 +89,7 @@ li.content a.active p {
     background-color: #4d4d4d;
     z-index: 10;
 }
-.hyperblock div{
+.hyperblock:not(#non-left) div{
     height: 50px;
     width: 50px;
     margin: 20px;
@@ -97,10 +97,28 @@ li.content a.active p {
     padding-left: 7px;
     border-left: 8px solid #ffcc0000;
     text-align: right;
+    transition: 0.3s;
 }
-.hyperblock div.active {
+.hyperblock:not(#non-left) div.active {
     border-left: 8px solid #ffcc00;
 }
-.hyperblock div:hover:not(.active) {
+.hyperblock:not(#non-left) div:hover:not(.active) {
     border-left: 8px solid #00ffff;
+}
+.hyperblock div img{
+    filter: brightness(0) invert(1);
+    transition: 0.3s;
+}
+.hyperblock#non-left{
+    top: 0;
+    padding-bottom: 10px;
+}
+.hyperblock#non-left div img{
+    filter: brightness(0) invert(0.8);
+}
+.hyperblock div.active img {
+    filter: brightness(1) invert(0);
+}
+.hyperblock div:hover:not(.active) img {
+    filter: brightness(1) invert(0) hue-rotate(120deg);
 }
