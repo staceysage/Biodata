@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/frontpage-font.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/personlist-font.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/user-log-bottombar.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/update-bio.css" /> -->
 </head>
 <body>
     <div class="grid-container">
@@ -58,6 +59,8 @@
         ?>
 
         <div class="grid-tiga">
+            
+            <?php //include 'update-div.php'; ?>
             <table class="table-person-content">
                 <tr>
                     <td style="background-color:#f3f3f3">
